@@ -23,7 +23,7 @@ export default function Hero() {
             <Headline />
             <Values />
             <Action />
-            <Logos />
+            {/*<Logos />*/}
             <Disclaimer />
           </div>
           <PhoneImage />
