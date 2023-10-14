@@ -6,11 +6,11 @@ import Auth from "@/components/auth";
 import Form from "./form";
 
 export const metadata = {
-  title: "Waitlist - OneVenue",
-  description: "Empower venue managers to close more deals more efficiently",
+  title: "Register - Referral Lion",
+  description: 'Referral marketplace for professional services',
 };
 
-export default function Waitlist() {
+export default function Register() {
   return (
     <>
       <div
