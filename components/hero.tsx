@@ -219,7 +219,7 @@ function Action() {
             alt="Avatar 04"
           />
         </div>
-        <div className="text-xs font-medium text-slate-500">+2K</div>
+        {/*<div className="text-xs font-medium text-slate-500">+2K</div>*/}
       </div>
     </div>
   )

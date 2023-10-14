@@ -61,7 +61,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-multiselect,
 .form-select,
 .form-checkbox {
-    @apply rounded-full;
+    @apply rounded-md;
 }
 
 .form-input,
