@@ -201,13 +201,13 @@ export default function Form() {
           />
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-2">
         <Button
           type="submit"
-          className="btn-sm text-sm text-white bg-blue-600 hover:bg-blue-700 w-full group disabled:opacity-50"
+          className="btn-sm text-sm text-white bg-blue-500 hover:bg-blue-600 w-full group disabled:opacity-50"
           disabled={loading}
         >
-          Request
+          Sign Up
           <ArrowRightIcon className="h-3 stroke-2 tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" />
         </Button>
       </div>
