@@ -4,7 +4,7 @@ import Host01 from "@/public/images/host-01.png"
 import Host02 from "@/public/images/host-02.png"
 import Host03 from "@/public/images/host-03.png"
 import Promoter from "@/public/images/promoter.jpg"
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 
 export default function Hosts() {
   return (
@@ -158,20 +158,18 @@ function Left() {
         </h2>
         <div className="space-y-3 text-slate-400">
           <p>
-            There are many variations of passages of lorem available,
-            but the majority have suffered alteration in some form by
-            injected humour.
+            There are many variations of passages of lorem available, but the
+            majority have suffered alteration in some form by injected humour.
           </p>
           <p className="italic">
-            'Latin words, combined with a handful of model sentence
-            structures, to generate which looks reasonable. The
-            generated is therefore always free from repetition.'
+            {
+              "'Latin words, combined with a handful of model sentence structures, to generate which looks reasonable. The generated is therefore always free from repetition.'"
+            }
           </p>
           <p>
-            Many desktop publishing packages and web page editors now
-            use Lorem Ipsum as their default model text, and a search
-            for 'lorem ipsum' will uncover many web sites still in
-            their infancy.
+            {
+              "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+            }
           </p>
         </div>
       </div>
@@ -186,8 +184,8 @@ function Action() {
       <Button className="btn group bg-blue-500 text-white shadow-sm hover:bg-blue-600">
         Get Started{" "}
         <span className="ml-1 tracking-normal text-blue-300 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
-            -&gt;
-          </span>
+          -&gt;
+        </span>
       </Button>
     </Link>
   )

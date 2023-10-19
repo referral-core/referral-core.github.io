@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button"
 export default function Hero() {
   return (
     <section className="relative">
-      <div className="mx-auto max-w-6xl px-4 pb-12 pt-16 sm:px-6 md:pt-36 md:pb-24">
+      <div className="mx-auto max-w-6xl px-4 pb-12 pt-16 sm:px-6 md:pb-24 md:pt-36">
         <div className="relative mx-auto flex max-w-xl flex-col text-center md:max-w-none md:flex-row md:text-left">
           <Background />
           <div className="py-12 md:min-h-[480px] md:w-[640px] md:py-20">
@@ -180,7 +180,7 @@ function Action() {
       data-aos="fade-right"
       data-aos-delay="300"
     >
-      <Link href="/register">
+      <Link href="https://app.referrallion.com">
         <Button className="btn group bg-blue-500 text-white shadow-sm hover:bg-blue-600">
           Get Started{" "}
           <span className="ml-1 tracking-normal text-blue-300 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">

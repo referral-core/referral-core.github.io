@@ -1,20 +1,27 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import Logo from '@/public/images/logo.svg'
+import Link from "next/link"
+import Image from "next/image"
+import Logo from "@/public/images/logo.svg"
 
 export default function Footer() {
   return (
     <footer>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="py-8 md:py-12">
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between">
+          <div className="flex flex-col items-center justify-center md:flex-row md:justify-between">
             <div className="mb-4 md:mb-0">
-              <div className="shrink-0 flex flex-col md:flex-row items-center">
-                <Link className="inline-flex mb-2 md:mb-0" href="/" aria-label="Referral Lion">
+              <div className="flex shrink-0 flex-col items-center md:flex-row">
+                <Link
+                  className="mb-2 inline-flex md:mb-0"
+                  href="/"
+                  aria-label="Referral Lion"
+                >
                   <Image src={Logo} width={36} height={28} alt="Logo" />
                 </Link>
-                <div className="text-sm text-slate-500 ml-4">
-                  Copyright © Referral Lion<span className="md:hidden lg:inline">. All rights reserved.</span>
+                <div className="ml-4 text-sm text-slate-500">
+                  Copyright © Referral Lion
+                  <span className="md:hidden lg:inline">
+                    . All rights reserved.
+                  </span>
                 </div>
               </div>
             </div>

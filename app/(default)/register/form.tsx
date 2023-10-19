@@ -1,21 +1,21 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import Email from "@emailjs/browser";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { useForm } from "@mantine/form";
-import { IMaskInput } from "react-imask";
-import {Button} from "@/components/ui/button";
+import { useState } from "react"
+import Link from "next/link"
+import Email from "@emailjs/browser"
+import { ArrowRightIcon } from "@heroicons/react/24/outline"
+import { useForm } from "@mantine/form"
+import { IMaskInput } from "react-imask"
+import { Button } from "@/components/ui/button"
 
-const EMAILJS_SERVICE_ID = "service_t2oc63w" as const;
-const EMAILJS_TEMPLATE_ID = "template_o00uvd5" as const;
-const EMAILJS_PUBLIC_API_KEY = "cAm4_BslKf4HuNSII" as const;
+const EMAILJS_SERVICE_ID = "service_t2oc63w" as const
+const EMAILJS_TEMPLATE_ID = "template_o00uvd5" as const
+const EMAILJS_PUBLIC_API_KEY = "cAm4_BslKf4HuNSII" as const
 
 export default function Form() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Error>();
-  const [completed, setCompleted] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<Error>()
+  const [completed, setCompleted] = useState(false)
   const form = useForm({
     initialValues: {
       firstName: "",
@@ -32,71 +32,72 @@ export default function Form() {
         value.trim().length < 2 ? "Name must be at least 2 characters" : null,
       email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
     },
-  });
+  })
 
   if (completed) {
     return (
       <div>
         <div>
-          Thanks! You're all set. You will receive an email from us within 24
-          hours.
+          {
+            "Thanks! You're all set. You will receive an email from us within 24 hours."
+          }
         </div>
         <Link
-          className="mt-4 btn-sm text-sm text-white bg-blue-600 hover:bg-blue-700 w-full group"
+          className="btn-sm group mt-4 w-full bg-blue-600 text-sm text-white hover:bg-blue-700"
           href="/"
         >
           Return Home
         </Link>
       </div>
-    );
+    )
   }
 
   if (error) {
     return (
       <div
-        className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+        className="relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700"
         role="alert"
       >
         <div className="font-bold">Something unexpected happened!</div>
         <div className="mt-2">Try refreshing the page.</div>
       </div>
-    );
+    )
   }
 
   return (
     <form
       onSubmit={form.onSubmit(async (values) => {
         try {
-          setLoading(true);
-          setError(undefined);
+          setLoading(true)
+          setError(undefined)
           await Email.send(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
             values,
             EMAILJS_PUBLIC_API_KEY
-          );
-          setCompleted(true);
+          )
+          setCompleted(true)
         } catch (err) {
           if (err instanceof Error) {
-            setError(err);
+            setError(err)
           }
         } finally {
-          setLoading(false);
+          setLoading(false)
         }
       })}
     >
       <div className="space-y-4">
-        <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+        <div className="space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
           <div className="sm:w-1/2">
             <label
-              className="block text-sm text-slate-600 font-medium mb-1"
+              className="mb-1 block text-sm font-medium text-slate-600"
               htmlFor="first-name"
             >
               First Name <span className="text-rose-500">*</span>
             </label>
             <input
               id="first-name"
-              className="form-input text-sm py-2 w-full"
+              className="form-input w-full py-2 text-sm"
               type="text"
               disabled={loading}
               required
@@ -110,14 +111,14 @@ export default function Form() {
           </div>
           <div className="sm:w-1/2">
             <label
-              className="block text-sm text-slate-600 font-medium mb-1"
+              className="mb-1 block text-sm font-medium text-slate-600"
               htmlFor="last-name"
             >
               Last Name <span className="text-rose-500">*</span>
             </label>
             <input
               id="last-name"
-              className="form-input text-sm py-2 w-full"
+              className="form-input w-full py-2 text-sm"
               type="text"
               disabled={loading}
               required
@@ -132,14 +133,14 @@ export default function Form() {
         </div>
         <div>
           <label
-            className="block text-sm text-slate-600 font-medium mb-1"
+            className="mb-1 block text-sm font-medium text-slate-600"
             htmlFor="email"
           >
             Email <span className="text-rose-500">*</span>
           </label>
           <input
             id="email"
-            className="form-input text-sm py-2 w-full"
+            className="form-input w-full py-2 text-sm"
             type="email"
             disabled={loading}
             required
@@ -151,14 +152,14 @@ export default function Form() {
         </div>
         <div>
           <label
-            className="block text-sm text-slate-600 font-medium mb-1"
+            className="mb-1 block text-sm font-medium text-slate-600"
             htmlFor="phone"
           >
             Phone <span className="text-rose-500">*</span>
           </label>
           <IMaskInput
             id="phone"
-            className="form-input text-sm py-2 w-full"
+            className="form-input w-full py-2 text-sm"
             mask="+1 (000) 000-0000"
             radix="."
             disabled={loading}
@@ -168,14 +169,14 @@ export default function Form() {
         </div>
         <div>
           <label
-            className="block text-sm text-slate-600 font-medium mb-1"
+            className="mb-1 block text-sm font-medium text-slate-600"
             htmlFor="referrer"
           >
             How did you hear about us? <span className="text-rose-500">*</span>
           </label>
           <select
             id="referrer"
-            className="form-select py-2 w-full"
+            className="form-select w-full py-2"
             disabled={loading}
             required
             {...form.getInputProps("source")}
@@ -187,14 +188,14 @@ export default function Form() {
         </div>
         <div>
           <label
-            className="block text-sm text-slate-600 font-medium mb-1"
+            className="mb-1 block text-sm font-medium text-slate-600"
             htmlFor="message"
           >
             What can we help you with?
           </label>
           <textarea
             id="message"
-            className="form-textarea text-sm py-2 w-full"
+            className="form-textarea w-full py-2 text-sm"
             disabled={loading}
             rows={2}
             {...form.getInputProps("message")}
@@ -204,13 +205,13 @@ export default function Form() {
       <div className="mt-2">
         <Button
           type="submit"
-          className="btn-sm text-sm text-white bg-blue-500 hover:bg-blue-600 w-full group disabled:opacity-50"
+          className="btn-sm group w-full bg-blue-500 text-sm text-white hover:bg-blue-600 disabled:opacity-50"
           disabled={loading}
         >
           Sign Up
-          <ArrowRightIcon className="h-3 stroke-2 tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" />
+          <ArrowRightIcon className="ml-1 h-3 stroke-2 tracking-normal transition-transform duration-150 ease-in-out group-hover:translate-x-0.5" />
         </Button>
       </div>
     </form>
-  );
+  )
 }

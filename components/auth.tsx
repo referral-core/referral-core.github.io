@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Avatar01 from "@/public/images/avatar-01.jpg";
-import Avatar02 from "@/public/images/avatar-02.jpg";
-import Avatar03 from "@/public/images/avatar-03.jpg";
-import Avatar04 from "@/public/images/avatar-04.jpg";
+import Image from "next/image"
+import Avatar01 from "@/public/images/avatar-01.jpg"
+import Avatar02 from "@/public/images/avatar-02.jpg"
+import Avatar03 from "@/public/images/avatar-03.jpg"
+import Avatar04 from "@/public/images/avatar-04.jpg"
 
 export default function Auth() {
   return (
-    <div className="hidden lg:block grow lg:mt-20 mb-12 lg:mb-0 flex flex-col items-center">
+    <div className="mb-12 flex grow flex-col items-center lg:mb-0 lg:mt-20 lg:block">
       {/* Avatars */}
-      <div className="flex -space-x-3 -ml-0.5 mb-6">
+      <div className="-ml-0.5 mb-6 flex -space-x-3">
         {AVATARS.map((avatar, i) => (
           <Image
             key={i}
-            className="rounded-full border-2 border-slate-900 box-content"
+            className="box-content rounded-full border-2 border-slate-900"
             src={avatar}
             width={40}
             height={40}
@@ -24,15 +24,15 @@ export default function Auth() {
       </div>
       <h2 className="h2 mb-8 text-center lg:text-left">
         Referral marketplace built for{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
+        <span className="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
           service professionals
         </span>
       </h2>
-      <ul className="inline-flex flex-col text-lg text-slate-500 space-y-3">
+      <ul className="inline-flex flex-col space-y-3 text-lg text-slate-500">
         {BULLETS.map((value, i) => (
           <li className="flex items-center" key={i}>
             <svg
-              className="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+              className="mr-3 h-3 w-3 shrink-0 fill-current text-emerald-500"
               viewBox="0 0 12 12"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -43,13 +43,13 @@ export default function Auth() {
         ))}
       </ul>
     </div>
-  );
+  )
 }
 
-const AVATARS = [Avatar01, Avatar02, Avatar03, Avatar04] as const;
+const AVATARS = [Avatar01, Avatar02, Avatar03, Avatar04] as const
 
 const BULLETS = [
   "Find the best deals for your clients",
   "Get rewarded for referring business to professionals in your network",
   "Professionals only pay for referral leads that convert to business",
-] as const;
+] as const

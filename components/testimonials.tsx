@@ -40,9 +40,7 @@ export default function Testimonials() {
                 alt="Testimonial 01"
               />
               <div>
-                <div className="font-extrabold text-slate-800">
-                  {t.name}
-                </div>
+                <div className="font-extrabold text-slate-800">{t.name}</div>
                 <Link
                   target="_blank"
                   className="font-medium text-blue-500 hover:underline"
