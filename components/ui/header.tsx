@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -14,33 +19,49 @@ import {
 } from "@/components/ui/menu"
 import {cn} from "@/lib/utils";
 
-export default function Header({ nav = true }: { nav?: boolean }) {
+import MobileMenu from "./mobile-menu";
+
+export default function Header() {
+  const [top, setTop] = useState<boolean>(true);
+
+  // detect whether user has scrolled the page down by 10px
+  const scrollHandler = () => {
+    window.pageYOffset > 10 ? setTop(false) : setTop(true);
+  };
+
+  useEffect(() => {
+    scrollHandler();
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, [top]);
+
   return (
-    <header className="absolute z-30 w-full">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <header
+      className={`fixed z-30 w-full transition duration-300 ease-in-out md:bg-opacity-90 ${
+        !top ? "bg-white shadow-lg backdrop-blur-sm" : ""
+      }`}
+    >
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="flex h-16 items-center justify-between md:h-20">
           <div className="mr-4 shrink-0">
-            <Link className="group block" href="/" aria-label="Referral Lion">
-              <Image src={Logo} width={36} height={28} alt="Logo" />
-            </Link>
+            <Image src={Logo} width={36} height={28} alt="Logo" />
           </div>
-          <NavigationMenuDemo />
-          {nav && (
-            <nav className="flex grow">
-              <ul className="flex grow flex-wrap items-center justify-end">
-                <li>
-                  <CTAButton text="Sign Up"/>
-                </li>
-              </ul>
-            </nav>
-          )}
+          <nav className="hidden md:flex md:grow">
+            <Menu />
+            <ul className="flex grow flex-wrap items-center justify-end">
+              <li>
+                <CTAButton text="Sign Up"/>
+              </li>
+            </ul>
+          </nav>
+          <MobileMenu />
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export function NavigationMenuDemo() {
+export function Menu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
