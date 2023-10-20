@@ -176,6 +176,9 @@ export default function Form() {
             {...form.getInputProps("phone")}
             onAccept={form.getInputProps("phone").onChange}
           />
+          {form.errors.phone && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.phone}</div>
+          )}
         </div>
         <div>
           <label
@@ -191,6 +194,9 @@ export default function Form() {
             required
             {...form.getInputProps("occupation")}
           />
+          {form.errors.occupation && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.occupation}</div>
+          )}
         </div>
         <div>
           <label
@@ -211,6 +217,9 @@ export default function Form() {
             <option>Buy Leads</option>
             <option>Both</option>
           </select>
+          {form.errors.intent && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.intent}</div>
+          )}
         </div>
         <div>
           <label
@@ -229,6 +238,9 @@ export default function Form() {
             <option>Facebook</option>
             <option>Other</option>
           </select>
+          {form.errors.source && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.source}</div>
+          )}
         </div>
         <div>
           <label
@@ -244,6 +256,9 @@ export default function Form() {
             rows={2}
             {...form.getInputProps("message")}
           />
+          {form.errors.message && (
+            <div className="mt-2 text-xs text-red-500">{form.errors.message}</div>
+          )}
         </div>
       </div>
       <div className="mt-2">
