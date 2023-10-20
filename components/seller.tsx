@@ -16,8 +16,8 @@ export default function Seller() {
 
       <div className="mx-auto max-w-3xl pb-12 text-center md:pb-12">
         <div className="mb-4 text-xl font-bold uppercase tracking-wider text-blue-500" data-aos="zoom-y-out">Lead Seller</div>
-        <h2 className="h2">Do you have business to refer?</h2>
-        <p className="mt-4 text-xl text-slate-500">Get <span className="font-extrabold">paid</span> for passing along business to professionals in your network.</p>
+        <h2 className="h2">Do you give referrals to your clients?</h2>
+        <p className="mt-4 text-xl text-slate-500">Get <span className="font-extrabold">paid</span> for passing along business to service professionals in your network.</p>
       </div>
 
       <div className="mx-auto grid max-w-xs gap-4 sm:max-w-none sm:grid-cols-2 md:max-w-xl lg:max-w-none lg:grid-cols-3 lg:gap-6" data-aos-id-featbl>

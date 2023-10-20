@@ -29,7 +29,7 @@ export default function Header({ nav = true }: { nav?: boolean }) {
             <nav className="flex grow">
               <ul className="flex grow flex-wrap items-center justify-end">
                 <li>
-                  <CTAButton />
+                  <CTAButton text="Sign Up"/>
                 </li>
               </ul>
             </nav>
