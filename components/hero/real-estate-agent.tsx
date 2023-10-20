@@ -10,7 +10,7 @@ export function Hero1() {
             <Question1 />
             <Headline amount="$4,400" mid="for referring your client to the right contractor in just " />
             <Values entity="contractors" />
-            <Action />
+            <Action occupation="Real Estate Agent" />
             <Disclaimer1 />
           </div>
           <PhoneImage />
@@ -32,7 +32,7 @@ export function Hero2() {
             <Values>
               Refer your client to an agent in your area and <span className="border-b font-bold">get paid</span> for the referral.
             </Values>
-            <Action />
+            <Action occupation="Real Estate Agent" />
             <Disclaimer2 />
           </div>
           <PhoneImage />

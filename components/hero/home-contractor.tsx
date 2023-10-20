@@ -13,7 +13,7 @@ export default function Hero() {
               Your customers are looking for help with landscaping, HVAC, pest control.{" "}
               <span className="border-b font-bold">Get paid</span> for connecting them to the right businesses.
             </Values>
-            <Action />
+            <Action occupation="Home Contractor" />
             <Disclaimer />
           </div>
           <PhoneImage />

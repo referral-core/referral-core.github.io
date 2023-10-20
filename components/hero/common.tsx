@@ -93,14 +93,14 @@ export function PhoneImage() {
   )
 }
 
-export function Action() {
+export function Action({ occupation }: { occupation: string }) {
   return (
     <div
       className="mx-auto mb-12 max-w-xs space-y-4 sm:flex sm:max-w-none sm:justify-center sm:space-x-4 sm:space-y-0 md:justify-start"
       data-aos="fade-right"
       data-aos-delay="300"
     >
-      <CTAButton />
+      <CTAButton query={{ occupation }} />
       <div className="space-y-2 sm:flex sm:items-center sm:justify-center sm:space-x-3 sm:space-y-0">
         <div className="-ml-0.5 inline-flex -space-x-3">
           <Image

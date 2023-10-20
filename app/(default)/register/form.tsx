@@ -7,12 +7,15 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import { useForm } from "@mantine/form"
 import { IMaskInput } from "react-imask"
 import { Button } from "@/components/ui/button"
+import {useSearchParams} from "next/navigation";
 
 const EMAILJS_SERVICE_ID = "service_t2oc63w" as const
 const EMAILJS_TEMPLATE_ID = "template_o00uvd5" as const
 const EMAILJS_PUBLIC_API_KEY = "cAm4_BslKf4HuNSII" as const
 
 export default function Form() {
+  const search = useSearchParams()
+
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<Error>()
   const [completed, setCompleted] = useState(false)
@@ -22,8 +25,8 @@ export default function Form() {
       lastName: "",
       email: "",
       phone: "",
-      occupation: "",
-      intent: "Sell Leads",
+      occupation: search.get("occupation") || "",
+      intent: search.get("intent") || "Sell Leads",
       source: "Google",
       message: "",
     },

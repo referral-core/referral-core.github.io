@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <Pricing />
       <div className="h-24" />
-      <Cta />
+      <Cta intent="Sell Leads" />
     </>
   )
 }

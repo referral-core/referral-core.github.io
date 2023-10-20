@@ -10,12 +10,12 @@ export default function Home() {
     <>
       <Hero />
       <Buyer />
-      <Cta headline="Ready to stop chasing low quality leads?">
+      <Cta intent="Buy Leads" headline="Ready to stop chasing low quality leads?">
         Source high-quality leads that are pre-qualified on budget and intent, and only pay for leads that convert.
       </Cta>
       <div className="h-16" />
       <Seller />
-      <Cta headline="Ready to start referring business?">
+      <Cta intent="Sell Leads" headline="Ready to start referring business?">
         Get paid for passing along business to professionals in your network.
       </Cta>
     </>

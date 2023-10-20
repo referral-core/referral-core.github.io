@@ -43,9 +43,9 @@ export default function Header() {
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="flex h-16 items-center justify-between md:h-20">
-          <div className="mr-4 shrink-0">
+          <Link href="/" className="mr-4 shrink-0">
             <Image src={Logo} width={36} height={28} alt="Logo" />
-          </div>
+          </Link>
           <nav className="hidden md:flex md:grow">
             <Menu />
             <ul className="flex grow flex-wrap items-center justify-end">

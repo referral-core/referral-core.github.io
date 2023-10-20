@@ -10,7 +10,7 @@ export default function Hero() {
             <Question />
             <Headline pre="another" amount="$2,810" mid="per client" />
             <Values />
-            <Action />
+            <Action occupation="Coach" />
             <Disclaimer />
           </div>
           <PhoneImage />

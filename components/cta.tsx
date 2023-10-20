@@ -3,7 +3,9 @@ import CTAButton from "@/components/cta-button";
 type Props = Partial<{
   headline: string;
   children: React.ReactNode
-}>
+}> & { intent: Intent }
+
+type Intent = 'Buy Leads' | 'Sell Leads'
 
 export default function Cta(props: Props) {
   return (
@@ -14,7 +16,7 @@ export default function Cta(props: Props) {
           <div className="-mx-20 px-20 py-12 md:py-20">
             <div className="items-center justify-between text-center md:flex md:text-left">
               <Headline {...props} />
-              <Action />
+              <Action intent={props.intent} />
             </div>
           </div>
         </div>
@@ -92,7 +94,7 @@ function Background() {
   )
 }
 
-function Headline(props: Props = {}) {
+function Headline(props: Props) {
   const { headline = "Ready to get started?", children } = props;
   return (
     <div className="md:max-w-[940px]">
@@ -109,14 +111,14 @@ function Headline(props: Props = {}) {
   )
 }
 
-function Action() {
+function Action({ intent }: { intent: Intent }) {
   return (
     <div
       className="mt-6 md:ml-5 md:mt-0"
       data-aos="fade-left"
       data-aos-duration="900"
     >
-      <CTAButton />
+      <CTAButton query={{ intent }}/>
     </div>
   )
 }

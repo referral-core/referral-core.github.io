@@ -14,7 +14,7 @@ export default function Hero() {
               clients and <span className="border-b font-bold">get rewarded</span> for
               passing along business to professionals in your network.
             </Values>
-            <Action />
+            <Action occupation="Event Planner"/>
             <Disclaimer />
           </div>
           <PhoneImage />
