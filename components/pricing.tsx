@@ -17,8 +17,8 @@ export default function Pricing() {
                   .
                 </div>
                 <div>
-                  We <span className="font-bold">do not</span> get
-                  paid unless you do.
+                  We <span className="font-bold">do not</span> get paid unless
+                  you do.
                 </div>
               </div>
             </div>

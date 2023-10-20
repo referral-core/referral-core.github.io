@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react"
+import { ArrowRightIcon } from "@heroicons/react/24/outline"
 
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "@/public/images/logo.svg"
-import CTAButton from "@/components/cta-button";
+import CTAButton from "@/components/cta-button"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,23 +17,23 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/menu"
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-import MobileMenu from "./mobile-menu";
+import MobileMenu from "./mobile-menu"
 
 export default function Header() {
-  const [top, setTop] = useState<boolean>(true);
+  const [top, setTop] = useState<boolean>(true)
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 10 ? setTop(false) : setTop(true);
-  };
+    window.pageYOffset > 10 ? setTop(false) : setTop(true)
+  }
 
   useEffect(() => {
-    scrollHandler();
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, [top]);
+    scrollHandler()
+    window.addEventListener("scroll", scrollHandler)
+    return () => window.removeEventListener("scroll", scrollHandler)
+  }, [top])
 
   return (
     <header
@@ -50,7 +50,7 @@ export default function Header() {
             <Menu />
             <ul className="flex grow flex-wrap items-center justify-end">
               <li>
-                <CTAButton text="Sign Up"/>
+                <CTAButton text="Sign Up" />
               </li>
             </ul>
           </nav>
@@ -58,7 +58,7 @@ export default function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
 export function Menu() {
@@ -82,10 +82,8 @@ export function Menu() {
                     className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
                     href="/#seller"
                   >
-                    <Image src={Logo} alt="Logo" className="h-6 w-6"/>
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Seller
-                    </div>
+                    <Image src={Logo} alt="Logo" className="h-6 w-6" />
+                    <div className="mb-2 mt-4 text-lg font-medium">Seller</div>
                     <p className="text-muted-foreground text-sm leading-tight">
                       Get paid to refer business to your network.
                     </p>
@@ -93,10 +91,10 @@ export function Menu() {
                 </NavigationMenuLink>
               </li>
               <span className="col-span-1">
-              <ListItem href="/real-estate-agent" title="Real Estate Agent" />
-              <ListItem href="/home-contractor" title="Home Contractor" />
-              <ListItem href="/event-planner" title="Event Planner" />
-              {/*<ListItem href="/coach" title="Coach" />*/}
+                <ListItem href="/real-estate-agent" title="Real Estate Agent" />
+                <ListItem href="/home-contractor" title="Home Contractor" />
+                <ListItem href="/event-planner" title="Event Planner" />
+                {/*<ListItem href="/coach" title="Coach" />*/}
               </span>
             </ul>
           </NavigationMenuContent>
@@ -122,9 +120,11 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-base font-medium leading-none">{title}</div>
-          {children && <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>}
+          {children && (
+            <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+              {children}
+            </p>
+          )}
         </a>
       </NavigationMenuLink>
     </li>

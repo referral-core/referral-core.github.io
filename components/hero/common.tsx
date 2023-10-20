@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Auction from "@/public/images/auction.png";
-import CTAButton from "@/components/cta-button";
-import Avatar01 from "@/public/images/avatar-01.jpg";
-import Avatar02 from "@/public/images/avatar-02.jpg";
-import Avatar03 from "@/public/images/avatar-03.jpg";
-import Avatar04 from "@/public/images/avatar-04.jpg";
-import Client01 from "@/public/images/client-01.svg";
-import Client02 from "@/public/images/client-02.svg";
-import Client03 from "@/public/images/client-03.svg";
-import Client04 from "@/public/images/client-04.svg";
+import Image from "next/image"
+import Auction from "@/public/images/auction.png"
+import CTAButton from "@/components/cta-button"
+import Avatar01 from "@/public/images/avatar-01.jpg"
+import Avatar02 from "@/public/images/avatar-02.jpg"
+import Avatar03 from "@/public/images/avatar-03.jpg"
+import Avatar04 from "@/public/images/avatar-04.jpg"
+import Client01 from "@/public/images/client-01.svg"
+import Client02 from "@/public/images/client-02.svg"
+import Client03 from "@/public/images/client-03.svg"
+import Client04 from "@/public/images/client-04.svg"
 
 export function Background() {
   return (
@@ -163,19 +163,40 @@ export function Logos() {
   )
 }
 
-export function Values({ entity = "professionals", children }: { entity?: string, children?: React.ReactNode }) {
+export function Values({
+  entity = "professionals",
+  children,
+}: {
+  entity?: string
+  children?: React.ReactNode
+}) {
   return (
     <div className="my-8 grid grid-cols-1 gap-y-4 text-xl text-slate-300">
       <div data-aos="fade-right" data-aos-delay="200">
-        {children || <>Find the <span className="border-b font-bold">best deals</span> for your
-        clients and <span className="border-b font-bold">get paid</span> for
-        passing along business to {entity} in your network.</>}
+        {children || (
+          <>
+            Find the <span className="border-b font-bold">best deals</span> for
+            your clients and{" "}
+            <span className="border-b font-bold">get paid</span> for passing
+            along business to {entity} in your network.
+          </>
+        )}
       </div>
     </div>
   )
 }
 
-export function Headline({ pre, amount, mid, post }: { pre?: string; amount: string, mid?: string; post?: string }) {
+export function Headline({
+  pre,
+  amount,
+  mid,
+  post,
+}: {
+  pre?: string
+  amount: string
+  mid?: string
+  post?: string
+}) {
   return (
     <h1
       className="mb-6 text-5xl font-medium leading-tight text-slate-100"
@@ -184,7 +205,8 @@ export function Headline({ pre, amount, mid, post }: { pre?: string; amount: str
     >
       Make {pre}{" "}
       <span className="font-extrabold">
-        {amount}<sup>*</sup>
+        {amount}
+        <sup>*</sup>
       </span>{" "}
       {mid}
       <span className="whitespace-nowrap text-blue-500">
@@ -205,7 +227,8 @@ export function Headline({ pre, amount, mid, post }: { pre?: string; amount: str
             />
           </svg>
         </span>
-      </span>{" "}{post}
+      </span>{" "}
+      {post}
     </h1>
   )
 }

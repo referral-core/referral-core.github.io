@@ -1,4 +1,10 @@
-import {Action, Background, Headline, PhoneImage, Values} from "@/components/hero/common";
+import {
+  Action,
+  Background,
+  Headline,
+  PhoneImage,
+  Values,
+} from "@/components/hero/common"
 
 export default function Hero() {
   return (
@@ -33,8 +39,7 @@ function Question() {
 function Disclaimer() {
   return (
     <div className="my-8 block text-xs text-white">
-      <sup>*</sup>{" "}
-      Estimate calculated using{" "}
+      <sup>*</sup> Estimate calculated using{" "}
       <a
         className="underline"
         target="_blank"
@@ -42,8 +47,8 @@ function Disclaimer() {
         rel="noreferrer"
       >
         an average wedding cost of $38,100
-      </a>
-      {" "}and an average referral tip of 15% of the contract value for closed leads.
+      </a>{" "}
+      and an average referral tip of 15% of the contract value for closed leads.
     </div>
   )
 }

@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import { useForm } from "@mantine/form"
 import { IMaskInput } from "react-imask"
 import { Button } from "@/components/ui/button"
-import {useSearchParams} from "next/navigation";
+import { useSearchParams } from "next/navigation"
 
 const EMAILJS_SERVICE_ID = "service_t2oc63w" as const
 const EMAILJS_TEMPLATE_ID = "template_o00uvd5" as const
@@ -78,7 +78,12 @@ export default function Form() {
           await Email.send(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
-            { ...values, message: [values.occupation, values.intent, values.message].filter(Boolean).join(' - ') },
+            {
+              ...values,
+              message: [values.occupation, values.intent, values.message]
+                .filter(Boolean)
+                .join(" - "),
+            },
             EMAILJS_PUBLIC_API_KEY
           )
           setCompleted(true)
@@ -192,7 +197,8 @@ export default function Form() {
             className="mb-1 block text-sm font-medium text-slate-600"
             htmlFor="intent"
           >
-            Are you looking to sell or buy leads? <span className="text-rose-500">*</span>
+            Are you looking to sell or buy leads?{" "}
+            <span className="text-rose-500">*</span>
           </label>
           <select
             id="intent"

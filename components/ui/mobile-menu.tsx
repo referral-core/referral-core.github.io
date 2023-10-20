@@ -1,43 +1,43 @@
-"use client";
+"use client"
 
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { Transition } from "@headlessui/react";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import CTAButton from "@/components/cta-button";
-import * as React from "react";
+import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
+import { Transition } from "@headlessui/react"
+import { ArrowRightIcon } from "@heroicons/react/24/outline"
+import CTAButton from "@/components/cta-button"
+import * as React from "react"
 
 export default function MobileMenu() {
-  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
 
-  const trigger = useRef<HTMLButtonElement>(null);
-  const mobileNav = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null)
+  const mobileNav = useRef<HTMLDivElement>(null)
 
   // close the mobile menu on click outside
   useEffect(() => {
     const clickHandler = ({ target }: { target: EventTarget | null }): void => {
-      if (!mobileNav.current || !trigger.current) return;
+      if (!mobileNav.current || !trigger.current) return
       if (
         !mobileNavOpen ||
         mobileNav.current.contains(target as Node) ||
         trigger.current.contains(target as Node)
       )
-        return;
-      setMobileNavOpen(false);
-    };
-    document.addEventListener("click", clickHandler);
-    return () => document.removeEventListener("click", clickHandler);
-  });
+        return
+      setMobileNavOpen(false)
+    }
+    document.addEventListener("click", clickHandler)
+    return () => document.removeEventListener("click", clickHandler)
+  })
 
   // close the mobile menu if the esc key is pressed
   useEffect(() => {
     const keyHandler = ({ keyCode }: { keyCode: number }): void => {
-      if (!mobileNavOpen || keyCode !== 27) return;
-      setMobileNavOpen(false);
-    };
-    document.addEventListener("keydown", keyHandler);
-    return () => document.removeEventListener("keydown", keyHandler);
-  });
+      if (!mobileNavOpen || keyCode !== 27) return
+      setMobileNavOpen(false)
+    }
+    document.addEventListener("keydown", keyHandler)
+    return () => document.removeEventListener("keydown", keyHandler)
+  })
 
   return (
     <div className="flex md:hidden">
@@ -79,7 +79,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/#buyer"
-                className="flex justify-center py-2 text-gray-600 hover:text-gray-900 font-bold"
+                className="flex justify-center py-2 font-bold text-gray-600 hover:text-gray-900"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Lead Buyer
@@ -89,7 +89,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="/#seller"
-                className="flex justify-center py-2 text-gray-600 hover:text-gray-900 font-bold"
+                className="flex justify-center py-2 font-bold text-gray-600 hover:text-gray-900"
                 onClick={() => setMobileNavOpen(false)}
               >
                 Lead Seller
@@ -124,11 +124,11 @@ export default function MobileMenu() {
             </li>
             <hr className="my-2" />
             <li className="flex justify-center">
-              <CTAButton text="Sign Up"/>
+              <CTAButton text="Sign Up" />
             </li>
           </ul>
         </Transition>
       </div>
     </div>
-  );
+  )
 }

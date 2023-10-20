@@ -1,11 +1,11 @@
-import CTAButton from "@/components/cta-button";
+import CTAButton from "@/components/cta-button"
 
 type Props = Partial<{
-  headline: string;
+  headline: string
   children: React.ReactNode
 }> & { intent: Intent }
 
-type Intent = 'Buy Leads' | 'Sell Leads'
+type Intent = "Buy Leads" | "Sell Leads"
 
 export default function Cta(props: Props) {
   return (
@@ -95,7 +95,7 @@ function Background() {
 }
 
 function Headline(props: Props) {
-  const { headline = "Ready to get started?", children } = props;
+  const { headline = "Ready to get started?", children } = props
   return (
     <div className="md:max-w-[940px]">
       <div
@@ -104,8 +104,13 @@ function Headline(props: Props) {
       >
         {headline}
       </div>
-      <p className="mt-2 text-lg text-slate-300 " data-aos="fade-right" data-aos-delay="100">
-        {children || "Get paid for passing along business to professionals in your network."}
+      <p
+        className="mt-2 text-lg text-slate-300 "
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        {children ||
+          "Get paid for passing along business to professionals in your network."}
       </p>
     </div>
   )
@@ -118,7 +123,7 @@ function Action({ intent }: { intent: Intent }) {
       data-aos="fade-left"
       data-aos-duration="900"
     >
-      <CTAButton query={{ intent }}/>
+      <CTAButton query={{ intent }} />
     </div>
   )
 }

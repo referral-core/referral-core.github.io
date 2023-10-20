@@ -5,8 +5,8 @@ import Avatar02 from "@/public/images/avatar-02.jpg"
 import Avatar03 from "@/public/images/avatar-03.jpg"
 import Avatar04 from "@/public/images/avatar-04.jpg"
 
-import CTAButton from "@/components/cta-button";
-import {Background} from "@/components/hero/common";
+import CTAButton from "@/components/cta-button"
+import { Background } from "@/components/hero/common"
 
 export default function Hero() {
   return (
@@ -62,8 +62,13 @@ function Values() {
   return (
     <div className="my-8 grid grid-cols-1 gap-y-4 text-xl text-slate-300">
       <div data-aos="fade-right" data-aos-delay="200">
-        <div>The <span className="font-bold">premier</span> referral marketplace for <span className="font-bold">service professionals</span>.</div>
-        <div className="mt-2">Buy and sell high quality referrals from and to your network.</div>
+        <div>
+          The <span className="font-bold">premier</span> referral marketplace
+          for <span className="font-bold">service professionals</span>.
+        </div>
+        <div className="mt-2">
+          Buy and sell high quality referrals from and to your network.
+        </div>
       </div>
     </div>
   )

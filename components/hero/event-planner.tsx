@@ -1,4 +1,10 @@
-import {Action, Background, Headline, PhoneImage, Values} from "@/components/hero/common";
+import {
+  Action,
+  Background,
+  Headline,
+  PhoneImage,
+  Values,
+} from "@/components/hero/common"
 
 export default function Hero() {
   return (
@@ -8,13 +14,18 @@ export default function Hero() {
           <Background />
           <div className="py-12 md:min-h-[480px] md:w-[640px] md:py-20">
             <Question />
-            <Headline pre="another" amount="$2,810" mid="per event with just " />
+            <Headline
+              pre="another"
+              amount="$2,810"
+              mid="per event with just "
+            />
             <Values>
-              Find the <span className="border-b font-bold">best deals</span> for your
-              clients and <span className="border-b font-bold">get rewarded</span> for
+              Find the <span className="border-b font-bold">best deals</span>{" "}
+              for your clients and{" "}
+              <span className="border-b font-bold">get rewarded</span> for
               passing along business to professionals in your network.
             </Values>
-            <Action occupation="Event Planner"/>
+            <Action occupation="Event Planner" />
             <Disclaimer />
           </div>
           <PhoneImage />
@@ -37,8 +48,7 @@ function Question() {
 function Disclaimer() {
   return (
     <div className="my-8 block text-xs text-white">
-      <sup>*</sup>{" "}
-      Estimate calculated using{" "}
+      <sup>*</sup> Estimate calculated using{" "}
       <a
         className="underline"
         target="_blank"
@@ -46,8 +56,8 @@ function Disclaimer() {
         rel="noreferrer"
       >
         an average wedding cost of $38,100
-      </a>
-      {" "}and an average referral tip of 15% of the contract value for closed leads.
+      </a>{" "}
+      and an average referral tip of 15% of the contract value for closed leads.
     </div>
   )
 }

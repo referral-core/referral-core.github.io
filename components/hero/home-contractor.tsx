@@ -1,4 +1,10 @@
-import {Action, Background, Headline, PhoneImage, Values} from "@/components/hero/common";
+import {
+  Action,
+  Background,
+  Headline,
+  PhoneImage,
+  Values,
+} from "@/components/hero/common"
 
 export default function Hero() {
   return (
@@ -8,10 +14,15 @@ export default function Hero() {
           <Background />
           <div className="py-12 md:min-h-[480px] md:w-[640px] md:py-20">
             <Question />
-            <Headline amount="$800" mid=" in " post="for referring your client to a professional in your area"/>
+            <Headline
+              amount="$800"
+              mid=" in "
+              post="for referring your client to a professional in your area"
+            />
             <Values>
-              Your customers are looking for help with landscaping, HVAC, pest control.{" "}
-              <span className="border-b font-bold">Get paid</span> for connecting them to the right businesses.
+              Your customers are looking for help with landscaping, HVAC, pest
+              control. <span className="border-b font-bold">Get paid</span> for
+              connecting them to the right businesses.
             </Values>
             <Action occupation="Home Contractor" />
             <Disclaimer />
@@ -36,8 +47,7 @@ function Question() {
 function Disclaimer() {
   return (
     <div className="my-8 block text-xs text-white">
-      <sup>*</sup>{" "}
-      Estimate calculated using an{" "}
+      <sup>*</sup> Estimate calculated using an{" "}
       <a
         className="underline"
         target="_blank"
@@ -45,8 +55,9 @@ function Disclaimer() {
         rel="noreferrer"
       >
         average HVAC service cost of $8,000
-      </a>
-      {" "}with an average referral tip of 10% of the contract value for closed leads.
+      </a>{" "}
+      with an average referral tip of 10% of the contract value for closed
+      leads.
     </div>
   )
 }
