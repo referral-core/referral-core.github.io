@@ -1,8 +1,11 @@
-import Link from "next/link"
+import CTAButton from "@/components/cta-button";
 
-import { Button } from "@/components/ui/button"
+type Props = Partial<{
+  headline: string;
+  children: React.ReactNode
+}>
 
-export default function Cta() {
+export default function Cta(props: Props) {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -10,7 +13,7 @@ export default function Cta() {
           <Background />
           <div className="-mx-20 px-20 py-12 md:py-20">
             <div className="items-center justify-between text-center md:flex md:text-left">
-              <Headline />
+              <Headline {...props} />
               <Action />
             </div>
           </div>
@@ -89,18 +92,18 @@ function Background() {
   )
 }
 
-function Headline() {
+function Headline(props: Props = {}) {
+  const { headline = "Ready to get started?", children } = props;
   return (
     <div className="md:max-w-[640px]">
       <div
-        className="mb-4 text-3xl font-extrabold text-slate-100"
+        className="text-4xl font-extrabold text-slate-100"
         data-aos="fade-right"
       >
-        Ready to get started?
+        {headline}
       </div>
-      <p className="text-slate-300" data-aos="fade-right" data-aos-delay="100">
-        Find the best deals for your clients and get paid for passing along
-        business to professionals in your network.
+      <p className="mt-2 text-lg text-slate-300 " data-aos="fade-right" data-aos-delay="100">
+        {children || "Get paid for passing along business to professionals in your network."}
       </p>
     </div>
   )
@@ -113,14 +116,7 @@ function Action() {
       data-aos="fade-left"
       data-aos-duration="900"
     >
-      <Link href="/register">
-        <Button className="btn group bg-blue-500 text-white shadow-sm hover:bg-blue-600">
-          Get Started{" "}
-          <span className="ml-1 tracking-normal text-blue-300 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
-            -&gt;
-          </span>
-        </Button>
-      </Link>
+      <CTAButton />
     </div>
   )
 }

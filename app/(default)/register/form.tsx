@@ -22,6 +22,8 @@ export default function Form() {
       lastName: "",
       email: "",
       phone: "",
+      occupation: "",
+      intent: "Sell Leads",
       source: "Google",
       message: "",
     },
@@ -73,7 +75,7 @@ export default function Form() {
           await Email.send(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
-            values,
+            { ...values, message: [values.occupation, values.intent, values.message].filter(Boolean).join(' - ') },
             EMAILJS_PUBLIC_API_KEY
           )
           setCompleted(true)
@@ -170,15 +172,48 @@ export default function Form() {
         <div>
           <label
             className="mb-1 block text-sm font-medium text-slate-600"
+            htmlFor="occupation"
+          >
+            Occupation <span className="text-rose-500">*</span>
+          </label>
+          <input
+            id="occupation"
+            className="form-input w-full py-2 text-sm"
+            disabled={loading}
+            required
+            {...form.getInputProps("occupation")}
+          />
+        </div>
+        <div>
+          <label
+            className="mb-1 block text-sm font-medium text-slate-600"
+            htmlFor="intent"
+          >
+            Are you looking to sell or buy leads? <span className="text-rose-500">*</span>
+          </label>
+          <select
+            id="intent"
+            className="form-select w-full py-2"
+            disabled={loading}
+            required
+            {...form.getInputProps("intent")}
+          >
+            <option>Sell Leads</option>
+            <option>Buy Leads</option>
+            <option>Both</option>
+          </select>
+        </div>
+        <div>
+          <label
+            className="mb-1 block text-sm font-medium text-slate-600"
             htmlFor="referrer"
           >
-            How did you hear about us? <span className="text-rose-500">*</span>
+            How did you hear about us?
           </label>
           <select
             id="referrer"
             className="form-select w-full py-2"
             disabled={loading}
-            required
             {...form.getInputProps("source")}
           >
             <option>Google</option>

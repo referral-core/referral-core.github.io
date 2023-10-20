@@ -1,16 +1,12 @@
 import Image from "next/image"
-import Link from "next/link"
 import Auction from "@/public/images/auction.png"
 import Avatar01 from "@/public/images/avatar-01.jpg"
 import Avatar02 from "@/public/images/avatar-02.jpg"
 import Avatar03 from "@/public/images/avatar-03.jpg"
 import Avatar04 from "@/public/images/avatar-04.jpg"
-import Client01 from "@/public/images/client-01.svg"
-import Client02 from "@/public/images/client-02.svg"
-import Client03 from "@/public/images/client-03.svg"
-import Client04 from "@/public/images/client-04.svg"
 
-import { Button } from "@/components/ui/button"
+import CTAButton from "@/components/cta-button";
+import {Background} from "@/components/hero/common";
 
 export default function Hero() {
   return (
@@ -19,12 +15,9 @@ export default function Hero() {
         <div className="relative mx-auto flex max-w-xl flex-col text-center md:max-w-none md:flex-row md:text-left">
           <Background />
           <div className="py-12 md:min-h-[480px] md:w-[640px] md:py-20">
-            <Question />
             <Headline />
             <Values />
             <Action />
-            {/*<Logos />*/}
-            <Disclaimer />
           </div>
           <PhoneImage />
         </div>
@@ -33,103 +26,21 @@ export default function Hero() {
   )
 }
 
-function Background() {
-  return (
-    <div
-      className="absolute inset-0 -z-10 -mx-20 mb-12 mt-0 overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 md:mb-0"
-      aria-hidden="true"
-    >
-      <div className="pointer-events-none absolute -top-16 left-1/2 -z-10 -translate-x-1/3 blur-2xl md:-translate-x-1/2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="2106" height="1327">
-          <defs>
-            <filter
-              id="hi-a"
-              width="133.3%"
-              height="131.3%"
-              x="-16.7%"
-              y="-15.6%"
-              filterUnits="objectBoundingBox"
-            >
-              <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
-            </filter>
-            <filter
-              id="hi-b"
-              width="133.3%"
-              height="131.3%"
-              x="-16.7%"
-              y="-15.6%"
-              filterUnits="objectBoundingBox"
-            >
-              <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
-            </filter>
-            <filter
-              id="hi-c"
-              width="159.9%"
-              height="145%"
-              x="-29.9%"
-              y="-22.5%"
-              filterUnits="objectBoundingBox"
-            >
-              <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
-            </filter>
-          </defs>
-          <g fill="none" fillRule="evenodd">
-            <path
-              fill="#6D28D9"
-              fillOpacity=".72"
-              d="M1110.164 893.257C1191.124 1079.102 1484 839.962 1484 626.315S883.228 0 669.507 0s40.54 412.668 40.54 626.315c0 213.647 319.156 81.096 400.117 266.942Z"
-              filter="url(#hi-a)"
-              transform="translate(0 -605)"
-            />
-            <path
-              fill="#67E8F9"
-              fillOpacity=".64"
-              d="M1732.164 1753.257c80.96 185.845 373.836-53.295 373.836-266.942S1505.228 860 1291.507 860s40.54 412.668 40.54 626.315c0 213.647 319.156 81.096 400.117 266.942Z"
-              filter="url(#hi-b)"
-              transform="translate(0 -605)"
-            />
-            <path
-              fill="#F472B6"
-              fillOpacity=".8"
-              d="M1191.108 871C1338.988 871 1631 635.765 1631 487.507 1631 339.248 1625.874 205 1477.994 205s-267.76 120.187-267.76 268.445c0 148.259-167.006 397.555-19.126 397.555Z"
-              filter="url(#hi-c)"
-              transform="translate(0 -605)"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-  )
-}
-
-function Question() {
-  return (
-    <div className="my-8 grid grid-cols-1 gap-y-4 text-3xl text-slate-100">
-      <div data-aos="fade-right" data-aos-delay="200">
-        Are you a <span className="font-extrabold">wedding planner?</span>
-      </div>
-    </div>
-  )
-}
-
 function Headline() {
   return (
     <h1
-      className="mb-6 text-5xl font-medium text-slate-100"
+      className="mb-6 text-6xl font-bold text-slate-100"
       data-aos="fade-right"
       data-aos-delay="100"
     >
-      Make another{" "}
-      <span className="font-extrabold">
-        $1,905<sup>*</sup>
-      </span>{" "}
-      every wedding with{" "}
-      <span className="whitespace-nowrap leading-tight text-blue-500">
-        15 minutes
+      <div>Give referrals</div>
+      <div className="mt-2">Get referrals</div>
+      <span className="font-permanent-marker whitespace-nowrap font-medium leading-tight text-blue-500">
+        Get paid
         <span className="relative inline-flex">
           <svg
             className="absolute right-0 top-full -z-10 mt-3 max-w-none"
-            width="243"
+            width="250"
             height="14"
             viewBox="0 0 135 9"
             xmlns="http://www.w3.org/2000/svg"
@@ -151,9 +62,8 @@ function Values() {
   return (
     <div className="my-8 grid grid-cols-1 gap-y-4 text-xl text-slate-300">
       <div data-aos="fade-right" data-aos-delay="200">
-        Find the <span className="border-b font-bold">best deals</span> for your
-        clients and <span className="border-b font-bold">get paid</span> for
-        passing along business to professionals in your network.
+        <div>The <span className="font-bold">premier</span> referral marketplace for <span className="font-bold">service professionals</span>.</div>
+        <div className="mt-2">Buy and sell high quality referrals from and to your network.</div>
       </div>
     </div>
   )
@@ -180,14 +90,7 @@ function Action() {
       data-aos="fade-right"
       data-aos-delay="300"
     >
-      <Link href="https://app.referrallion.com">
-        <Button className="btn group bg-blue-500 text-white shadow-sm hover:bg-blue-600">
-          Get Started{" "}
-          <span className="ml-1 tracking-normal text-blue-300 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
-            -&gt;
-          </span>
-        </Button>
-      </Link>
+      <CTAButton />
       <div className="space-y-2 sm:flex sm:items-center sm:justify-center sm:space-x-3 sm:space-y-0">
         <div className="-ml-0.5 inline-flex -space-x-3">
           <Image
@@ -221,50 +124,6 @@ function Action() {
         </div>
         {/*<div className="text-xs font-medium text-slate-500">+2K</div>*/}
       </div>
-    </div>
-  )
-}
-
-function Logos() {
-  return (
-    <div
-      className="mx-auto max-w-xs sm:max-w-none"
-      data-aos="fade-right"
-      data-aos-delay="400"
-    >
-      <div className="-mx-4 -my-2 inline-flex flex-wrap items-center justify-center md:-mx-6">
-        <div className="flex w-1/2 justify-center px-4 py-2 sm:w-auto md:px-6">
-          <Image src={Client01} width={82} alt="Client 01" />
-        </div>
-        <div className="flex w-1/2 justify-center px-4 py-2 sm:w-auto md:px-6">
-          <Image src={Client02} width={97} alt="Client 02" />
-        </div>
-        {/*<div className="flex w-1/2 justify-center px-4 py-2 sm:w-auto md:px-6">*/}
-        {/*  <Image src={Client03} width={113} alt="Client 03" />*/}
-        {/*</div>*/}
-        <div className="flex w-1/2 justify-center px-4 py-2 sm:-mt-2 sm:w-auto md:px-6">
-          <Image src={Client04} width={82} alt="Client 04" />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function Disclaimer() {
-  return (
-    <div className="my-8 block text-xs text-white">
-      <sup>*</sup>
-      Estimate calculated by{" "}
-      <a
-        className="underline"
-        target="_blank"
-        href="https://www.theknot.com/content/average-wedding-cost#-average-wedding-cost"
-        rel="noreferrer"
-      >
-        an average wedding cost of $38,100
-      </a>
-      {", "}an estimated 50% of contracts being bid on by service vendors, and
-      an average referral tip of 10% for closed leads.
     </div>
   )
 }

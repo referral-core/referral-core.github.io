@@ -51,5 +51,5 @@ const AVATARS = [Avatar01, Avatar02, Avatar03, Avatar04] as const
 const BULLETS = [
   "Find the best deals for your clients",
   "Get rewarded for referring business to professionals in your network",
-  "Professionals only pay for referral leads that convert to business",
+  "Only pay for leads that convert to actual business for you",
 ] as const

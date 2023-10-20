@@ -34,7 +34,7 @@ export default function Register() {
                 aria-hidden="true"
               />
               <div className="p-6 md:p-8">
-                <div className="mb-6 text-xl font-bold">Join Waitlist</div>
+                <div className="mb-6 text-xl font-bold">Sign Up</div>
                 <Form />
               </div>
             </div>
