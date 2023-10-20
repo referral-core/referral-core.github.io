@@ -95,7 +95,7 @@ function Background() {
 function Headline(props: Props = {}) {
   const { headline = "Ready to get started?", children } = props;
   return (
-    <div className="md:max-w-[640px]">
+    <div className="md:max-w-[940px]">
       <div
         className="text-4xl font-extrabold text-slate-100"
         data-aos="fade-right"
