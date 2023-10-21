@@ -93,8 +93,8 @@ export function Menu() {
               <span className="col-span-1">
                 <ListItem href="/real-estate-agent" title="Real Estate Agent" />
                 <ListItem href="/home-contractor" title="Home Contractor" />
+                <ListItem href="/coach" title="Coach" />
                 <ListItem href="/event-planner" title="Event Planner" />
-                {/*<ListItem href="/coach" title="Coach" />*/}
               </span>
             </ul>
           </NavigationMenuContent>

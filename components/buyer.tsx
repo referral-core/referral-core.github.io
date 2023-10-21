@@ -2,7 +2,7 @@ import { Background } from "@/components/pricing"
 import {
   ChatBubbleLeftRightIcon,
   CurrencyDollarIcon,
-  LinkIcon,
+  LockClosedIcon,
 } from "@heroicons/react/24/outline"
 
 export default function Buyer() {
@@ -14,16 +14,19 @@ export default function Buyer() {
       <div className="pb-16 md:pb-4">
         <Background />
 
-        <div className="mx-auto max-w-3xl pb-8 text-center">
+        <div className="mx-auto max-w-4xl pb-8 text-center">
           <div
             className="mb-4 text-xl font-bold uppercase tracking-wider text-blue-500"
             data-aos="zoom-y-out"
           >
             Lead Buyer
           </div>
-          <h2 className="h2">Looking for high quality leads?</h2>
+          <h2 className="h2">Stop wasting your time and money with low quality leads.</h2>
           <p className="mt-4 text-xl text-slate-500">
-            Stop wasting your precious time and money chasing low quality leads.
+            Referrals from your trusted network are the best leads for your business.
+          </p>
+          <p className="mt-1 text-xl text-slate-500">
+            With Referral Lion you get:
           </p>
         </div>
 
@@ -32,12 +35,12 @@ export default function Buyer() {
           data-aos-id-featbl
         >
           <div
-            className="group flex flex-col rounded-2xl bg-gradient-to-br from-slate-900 to-slate-700 p-5 py-10 text-center text-white shadow-2xl"
+            className="group flex flex-col rounded-2xl bg-slate-700 p-5 py-10 text-center text-white shadow-2xl"
             data-aos="fade-down"
             data-aos-anchor="[data-aos-id-featbl]"
           >
             <ChatBubbleLeftRightIcon className="mx-auto mb-2 h-12 w-12" />
-            <div className="mb-2 mt-1 text-xl font-black tracking-tighter">
+            <div className="mb-2 mt-1 text-xl font-bold">
               High Quality Leads
             </div>
             <div className="text-lg opacity-80">
@@ -48,14 +51,14 @@ export default function Buyer() {
             </div>
           </div>
           <div
-            className="group flex flex-col rounded-2xl bg-gradient-to-br from-slate-900 to-slate-700 p-5 py-10 text-center text-white shadow-2xl"
+            className="group flex flex-col rounded-2xl bg-slate-700 p-5 py-10 text-center text-white shadow-2xl"
             data-aos="fade-down"
             data-aos-anchor="[data-aos-id-featbl]"
             data-aos-delay="100"
           >
             <CurrencyDollarIcon className="mx-auto mb-2 h-12 w-12" />
-            <div className="mb-2 mt-1 text-xl font-black tracking-tighter">
-              Pricing
+            <div className="mb-2 mt-1 text-xl font-bold">
+              Transparent Costs
             </div>
             <div className="text-lg opacity-80">
               Only pay for leads that{" "}
@@ -64,18 +67,16 @@ export default function Buyer() {
             </div>
           </div>
           <div
-            className="group flex flex-col rounded-2xl bg-gradient-to-br from-slate-900 to-slate-700 p-5 py-10 text-center text-white shadow-2xl"
+            className="group flex flex-col rounded-2xl bg-slate-700 p-5 py-10 text-center text-white shadow-2xl"
             data-aos="fade-down"
             data-aos-anchor="[data-aos-id-featbl]"
             data-aos-delay="200"
           >
-            <LinkIcon className="mx-auto mb-2 h-12 w-12" />
-            <div className="mb-2 mt-1 text-xl font-black tracking-tighter">
-              Network
-            </div>
+            <LockClosedIcon className="mx-auto mb-2 h-12 w-12" />
+            <div className="mb-2 mt-1 text-xl font-bold">Money Back Guarantee</div>
             <div className="text-lg opacity-80">
-              Allow your network to pre-qualify leads for you so you can{" "}
-              <span className="font-extrabold">focus on your clients</span>
+              If the contract falls through, you get your{" "}
+              <span className="font-extrabold">lead costs back</span>
             </div>
           </div>
         </div>

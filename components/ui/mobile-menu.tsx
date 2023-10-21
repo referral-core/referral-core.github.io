@@ -115,6 +115,15 @@ export default function MobileMenu() {
             </li>
             <li>
               <Link
+                href="/coach"
+                className="flex justify-center py-2 text-gray-600 hover:text-gray-900"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                Coach
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/event-planner"
                 className="flex justify-center py-2 text-gray-600 hover:text-gray-900"
                 onClick={() => setMobileNavOpen(false)}

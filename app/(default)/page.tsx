@@ -19,7 +19,10 @@ export default function Home() {
       </Cta>
       <div className="h-16" />
       <Seller />
-      <Cta intent="Sell Leads" headline="Ready to start referring business?">
+      <Cta
+        intent="Sell Leads"
+        headline="Ready to start earning on your business referrals?"
+      >
         Get paid for passing along business to professionals in your network.
       </Cta>
     </>
