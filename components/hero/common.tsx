@@ -79,7 +79,7 @@ export function Background() {
   )
 }
 
-export function PhoneImage() {
+export function PhoneImage({ src }: { src?: any }) {
   return (
     <div className="relative mx-auto h-[600px] w-[300px] max-w-sm rounded-[2.5rem] border-[14px] border-gray-800 bg-gray-800 dark:border-gray-800 md:absolute md:left-[40rem] md:top-1/2 md:ml-8 md:max-w-none md:-translate-y-1/2 lg:ml-20 xl:ml-32">
       <div className="absolute -left-[17px] top-[72px] h-[32px] w-[3px] rounded-l-lg bg-gray-800 dark:bg-gray-800"></div>
@@ -87,7 +87,7 @@ export function PhoneImage() {
       <div className="absolute -left-[17px] top-[178px] h-[46px] w-[3px] rounded-l-lg bg-gray-800 dark:bg-gray-800"></div>
       <div className="absolute -right-[17px] top-[142px] h-[64px] w-[3px] rounded-r-lg bg-gray-800 dark:bg-gray-800"></div>
       <div className="h-[572px] w-[272px] overflow-hidden rounded-[2rem] bg-white dark:bg-gray-800">
-        <Image src={Auction} alt="Auction" className="h-[572px] w-[272px]" />
+        <Image src={src || Auction} alt="Auction" className="h-[572px] w-[272px]" />
       </div>
     </div>
   )

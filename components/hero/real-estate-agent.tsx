@@ -5,6 +5,10 @@ import {
   PhoneImage,
   Values,
 } from "@/components/hero/common"
+import Auction1 from "@/public/images/auction-real-estate-1.png"
+import Auction2 from "@/public/images/auction-real-estate-2.png"
+
+
 
 export function Hero1() {
   return (
@@ -22,7 +26,7 @@ export function Hero1() {
             <Action occupation="Real Estate Agent" />
             <Disclaimer1 />
           </div>
-          <PhoneImage />
+          <PhoneImage src={Auction2} />
         </div>
       </div>
     </section>
@@ -46,7 +50,7 @@ export function Hero2() {
             <Action occupation="Real Estate Agent" />
             <Disclaimer2 />
           </div>
-          <PhoneImage />
+          <PhoneImage src={Auction1}/>
         </div>
       </div>
     </section>

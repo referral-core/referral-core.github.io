@@ -5,6 +5,7 @@ import {
   PhoneImage,
   Values,
 } from "@/components/hero/common"
+import Auction from "@/public/images/auction-home-contractor.png"
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
             <Action occupation="Home Contractor" />
             <Disclaimer />
           </div>
-          <PhoneImage />
+          <PhoneImage src={Auction} />
         </div>
       </div>
     </section>
