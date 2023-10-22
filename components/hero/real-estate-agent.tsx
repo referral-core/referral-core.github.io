@@ -8,8 +8,6 @@ import {
 import Auction1 from "@/public/images/auction-real-estate-1.png"
 import Auction2 from "@/public/images/auction-real-estate-2.png"
 
-
-
 export function Hero1() {
   return (
     <section className="relative">
@@ -50,7 +48,7 @@ export function Hero2() {
             <Action occupation="Real Estate Agent" />
             <Disclaimer2 />
           </div>
-          <PhoneImage src={Auction1}/>
+          <PhoneImage src={Auction1} />
         </div>
       </div>
     </section>

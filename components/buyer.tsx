@@ -21,9 +21,12 @@ export default function Buyer() {
           >
             Lead Buyer
           </div>
-          <h2 className="h2">Stop wasting your time and money with low quality leads.</h2>
+          <h2 className="h2">
+            Stop wasting your time and money with low quality leads.
+          </h2>
           <p className="mt-4 text-xl text-slate-500">
-            Referrals from your trusted network are the best leads for your business.
+            Referrals from your trusted network are the best leads for your
+            business.
           </p>
           <p className="mt-1 text-xl text-slate-500">
             With Referral Lion you get:
@@ -57,9 +60,7 @@ export default function Buyer() {
             data-aos-delay="100"
           >
             <CurrencyDollarIcon className="mx-auto mb-2 h-12 w-12" />
-            <div className="mb-2 mt-1 text-xl font-bold">
-              Transparent Costs
-            </div>
+            <div className="mb-2 mt-1 text-xl font-bold">Transparent Costs</div>
             <div className="text-lg opacity-80">
               Only pay for leads that{" "}
               <span className="font-extrabold">convert to actual business</span>{" "}
@@ -73,7 +74,9 @@ export default function Buyer() {
             data-aos-delay="200"
           >
             <LockClosedIcon className="mx-auto mb-2 h-12 w-12" />
-            <div className="mb-2 mt-1 text-xl font-bold">Money Back Guarantee</div>
+            <div className="mb-2 mt-1 text-xl font-bold">
+              Money Back Guarantee
+            </div>
             <div className="text-lg opacity-80">
               If the contract falls through, you get your{" "}
               <span className="font-extrabold">lead costs back</span>

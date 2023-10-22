@@ -76,11 +76,19 @@ export default function Seller() {
             </div>
             <ArrowRightIcon className="h-6 w-6 -translate-x-2 self-end stroke-2 transition duration-150 ease-in-out group-hover:translate-x-0" />
           </Link>
-          <Link className="group flex flex-col rounded-2xl bg-gradient-to-tr from-[#3b81f6] to-[#90b1e6] p-5 pt-10 text-center text-white shadow-2xl" href="/coach" data-aos="fade-down" data-aos-anchor="[data-aos-id-featbl]" data-aos-delay="300">
+          <Link
+            className="group flex flex-col rounded-2xl bg-gradient-to-tr from-[#3b81f6] to-[#90b1e6] p-5 pt-10 text-center text-white shadow-2xl"
+            href="/coach"
+            data-aos="fade-down"
+            data-aos-anchor="[data-aos-id-featbl]"
+            data-aos-delay="300"
+          >
             <ChatBubbleLeftEllipsisIcon className="mx-auto mb-4 h-12 w-12" />
             <div className="text-xl opacity-80">I am a</div>
-            <div className="mb-2 mt-1 text-xl font-black tracking-tighter">Coach</div>
-            <ArrowRightIcon className="h-6 w-6 -translate-x-2 self-end stroke-2 transition duration-150 ease-in-out group-hover:translate-x-0"/>
+            <div className="mb-2 mt-1 text-xl font-black tracking-tighter">
+              Coach
+            </div>
+            <ArrowRightIcon className="h-6 w-6 -translate-x-2 self-end stroke-2 transition duration-150 ease-in-out group-hover:translate-x-0" />
           </Link>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Avatar03 from "@/public/images/avatar-03.jpg"
 import Avatar04 from "@/public/images/avatar-04.jpg"
 
 import CTAButton from "@/components/cta-button"
-import {Background, PhoneImage} from "@/components/hero/common"
+import { Background, PhoneImage } from "@/components/hero/common"
 
 export default function Hero() {
   return (

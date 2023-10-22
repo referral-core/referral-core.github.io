@@ -87,7 +87,11 @@ export function PhoneImage({ src }: { src?: any }) {
       <div className="absolute -left-[17px] top-[178px] h-[46px] w-[3px] rounded-l-lg bg-gray-800 dark:bg-gray-800"></div>
       <div className="absolute -right-[17px] top-[142px] h-[64px] w-[3px] rounded-r-lg bg-gray-800 dark:bg-gray-800"></div>
       <div className="h-[572px] w-[272px] overflow-hidden rounded-[2rem] bg-white dark:bg-gray-800">
-        <Image src={src || Auction} alt="Auction" className="h-[572px] w-[272px]" />
+        <Image
+          src={src || Auction}
+          alt="Auction"
+          className="h-[572px] w-[272px]"
+        />
       </div>
     </div>
   )

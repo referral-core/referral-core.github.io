@@ -15,9 +15,14 @@ export default function Hero() {
           <Background />
           <div className="py-12 md:min-h-[480px] md:w-[640px] md:py-20">
             <Question />
-            <Headline amount="$225" mid="for referring your lead to a coach in your network in just " />
+            <Headline
+              amount="$225"
+              mid="for referring your lead to a coach in your network in just "
+            />
             <Values>
-              <span className="border-b font-bold">Get compensated</span> for passing along leads that aren’t the right fit for your coaching business to other coaches in your network.
+              <span className="border-b font-bold">Get compensated</span> for
+              passing along leads that aren’t the right fit for your coaching
+              business to other coaches in your network.
             </Values>
             <Action occupation="Coach" />
             <Disclaimer />
@@ -33,7 +38,8 @@ function Question() {
   return (
     <div className="my-8 grid grid-cols-1 gap-y-4 text-3xl text-slate-100">
       <div data-aos="fade-right" data-aos-delay="200">
-        Got a client that is <span className="font-extrabold">not the right fit?</span>
+        Got a client that is{" "}
+        <span className="font-extrabold">not the right fit?</span>
       </div>
     </div>
   )
@@ -50,7 +56,8 @@ function Disclaimer() {
         rel="noreferrer"
       >
         an average rate of $150 / hr
-      </a>, 10 booked sessions, and an average referral tip of 15%
+      </a>
+      , 10 booked sessions, and an average referral tip of 15%
     </div>
   )
 }
