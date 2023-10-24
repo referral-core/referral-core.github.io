@@ -10,7 +10,7 @@ type Props = Partial<{
 export default function CTAButton(props: Props) {
   const { text = "Get Started" } = props
   return (
-    <Link href="https://app.referrallion.com">
+    <Link href="https://app.referrallion.com/register">
       <Button
         className="group bg-blue-500 text-white hover:bg-blue-600"
         style={{ borderRadius: "20px" }}
