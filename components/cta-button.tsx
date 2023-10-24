@@ -9,10 +9,8 @@ type Props = Partial<{
 
 export default function CTAButton(props: Props) {
   const { text = "Get Started" } = props
-  const params = new URLSearchParams(props.query as any).toString()
-  const url = `/register${params ? `?${params}` : ""}`
   return (
-    <Link href={url}>
+    <Link href="https://app.referrallion.com">
       <Button
         className="group bg-blue-500 text-white hover:bg-blue-600"
         style={{ borderRadius: "20px" }}
