@@ -67,7 +67,7 @@ function Values() {
           for <span className="font-bold">service professionals</span>.
         </div>
         <div className="mt-2">
-          Buy and sell high quality referrals from and to your network.
+          Buy and sell high quality referrals in your network.
         </div>
       </div>
     </div>
